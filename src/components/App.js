@@ -1,17 +1,19 @@
 import '../styles/App.scss';
 import getDataFromApi from '../services/Api';
+import LS from '../services/LocalStorage';
 import CharacterList from './CharacterList';
 import imageHeader from '../images/RyM2.png';
 import { useState, useEffect } from 'react';
 
 function App() {
 
-  const [characterList, setCharacterList] = useState ([]);
+  const [characterList, setCharacterList] = useState (LS.get('characters', []));
 
   useEffect(() => {
     getDataFromApi()
       .then((cleanData) => {
         setCharacterList(cleanData);
+        LS.set('characters', cleanData);
       })
   }, []);
 
