@@ -1,16 +1,37 @@
-//seccion import
-
-//.- de React, de archivos propios, Sass, Images
 import '../styles/App.scss';
+import getDataFromApi from '../services/Api';
+import imageHeader from '../images/RyM2.png';
+import { useState, useEffect } from 'react';
 
-/*  COMPONENTE */
 function App() {
-  /*
-    Variables de estado, funciones manejadoras de eventos, variables, funcion handle 
-  */
-  /* RETURN --> HTML */
-  return <div>pagina principal</div>;
+
+  const [characterList, setCharacterList] = useState ([]);
+
+  useEffect(() => {
+    getDataFromApi()
+      .then((cleanData) => {
+        setCharacterList(cleanData);
+      })
+  }, []);
+
+  return (
+    <div>
+      <header className="header">
+        <img src={imageHeader} className="headerImage" alt="Rick y Morty" />
+      </header>
+      <main className="main">
+        <form className="form">
+          <label className="label" htmlFor="inputName">
+            Busca por nombre
+          </label>
+          <input type="text" className="inputName" id="inputName" />
+        </form>
+        <ul>
+          <li></li>
+        </ul>
+      </main>
+    </div>
+  );
 }
 
-/* export*/
 export default App;
