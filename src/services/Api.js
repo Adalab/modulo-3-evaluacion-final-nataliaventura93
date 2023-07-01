@@ -11,7 +11,6 @@ const getDataFromApi = () => {
             species: obj.species,
           };
         });
-        console.log(cleanData);
         return cleanData;
       })
     )

@@ -1,5 +1,6 @@
 import '../styles/App.scss';
 import getDataFromApi from '../services/Api';
+import CharacterList from './CharacterList';
 import imageHeader from '../images/RyM2.png';
 import { useState, useEffect } from 'react';
 
@@ -26,9 +27,7 @@ function App() {
           </label>
           <input type="text" className="inputName" id="inputName" />
         </form>
-        <ul>
-          <li></li>
-        </ul>
+        <CharacterList characterList={characterList}/>
       </main>
     </div>
   );
