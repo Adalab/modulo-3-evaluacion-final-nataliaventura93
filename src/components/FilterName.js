@@ -1,6 +1,6 @@
-const FilterName = (props) => {
+const FilterName = ({handleFilter, searchName}) => {
   const handleInputName = (ev) => {
-    props.handleFilter('name', ev.target.value);
+    handleFilter('name', ev.target.value);
   };
 
   return (
@@ -10,7 +10,7 @@ const FilterName = (props) => {
         type="text"
         className="input"
         id="inputName"
-        value={props.searchName}
+        value={searchName}
         onInput={handleInputName}
       />
     </label>

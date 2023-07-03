@@ -1,15 +1,15 @@
 import { Fragment } from 'react';
 
-const characterCard = (props) => {
+const characterCard = ({card}) => {
   return (
     <Fragment>
       <img
         className="listCharacter__card--img"
-        src={props.card.photo}
-        alt={`Foto de ${props.card.name}`}
+        src={card.photo}
+        alt={`Foto de ${card.name}`}
       />
-      <span className="listCharacter__card--name">{props.card.name}</span>
-      <span className="listCharacter__card--specie">{props.card.species}</span>
+      <span className="listCharacter__card--name">{card.name}</span>
+      <span className="listCharacter__card--specie">{card.species}</span>
     </Fragment>
   );
 };

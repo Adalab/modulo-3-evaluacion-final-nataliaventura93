@@ -1,8 +1,8 @@
 
 
-const FilterSpecie = (props) => {
+const FilterSpecie = ({handleFilter, searchSpecie}) => {
   const handleInputSpecie = (ev) => {
-    props.handleFilter('species', ev.target.value);
+    handleFilter('species', ev.target.value);
   };
   return (
     <label className="label" htmlFor="input">
@@ -11,7 +11,7 @@ const FilterSpecie = (props) => {
         type="text"
         className="input"
         id="inputName"
-        value={props.searchSpecie}
+        value={searchSpecie}
         onInput={handleInputSpecie}
       />
     </label>

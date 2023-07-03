@@ -2,16 +2,16 @@ import FilterSpecie from './FilterSpecie';
 import FilterName from './FilterName';
 import '../styles/layout/Form.scss';
 
-const Filters = (props) => {
+const Filters = ({searchName, searchSpecie, handleFilter}) => {
   return (
     <form className="form">
       <FilterName
-        searchName={props.searchName}
-        handleFilter={props.handleFilter}
+        searchName={searchName}
+        handleFilter={handleFilter}
       />
       <FilterSpecie
-        searchSpecie={props.searchSpecie}
-        handleFilter={props.handleFilter}
+        searchSpecie={searchSpecie}
+        handleFilter={handleFilter}
       />
     </form>
   );
