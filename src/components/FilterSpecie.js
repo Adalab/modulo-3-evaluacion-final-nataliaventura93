@@ -5,8 +5,8 @@ const FilterSpecie = ({handleFilter, searchSpecie}) => {
     handleFilter('species', ev.target.value);
   };
   return (
-    <label className="label" htmlFor="input">
-      Search by specie
+    <div>
+    <label className="label" htmlFor="inputName">Search by specie</label>
       <input
         type="text"
         className="input"
@@ -14,7 +14,7 @@ const FilterSpecie = ({handleFilter, searchSpecie}) => {
         value={searchSpecie}
         onInput={handleInputSpecie}
       />
-    </label>
+    </div>
   );
 };
 

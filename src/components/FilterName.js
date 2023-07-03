@@ -4,16 +4,17 @@ const FilterName = ({handleFilter, searchName}) => {
   };
 
   return (
-    <label className="label" htmlFor="input">
-      Search by name
+    <div>
+    <label className="label" htmlFor="inputSpecie">Search by name</label>
+      
       <input
         type="text"
         className="input"
-        id="inputName"
+        id="inputSpecie"
         value={searchName}
         onInput={handleInputName}
       />
-    </label>
+    </div>
   );
 };
 
