@@ -9,6 +9,9 @@ const getDataFromApi = () => {
             photo: obj.image,
             name: obj.name,
             species: obj.species,
+            status: obj.status,
+            origin: obj.origin.name,
+            episodes: obj.episode.length
           };
         });
         return cleanData;
