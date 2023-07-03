@@ -1,4 +1,5 @@
 import CharacterCard from './CharacterCard';
+import '../styles/layout/ListCharacter.scss';
 
 const CharacterList = (props) => {
   const eachCard = props.characterList.map((card, id) => (

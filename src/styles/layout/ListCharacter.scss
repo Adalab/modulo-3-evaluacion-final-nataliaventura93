@@ -1,0 +1,35 @@
+.listCharacter {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    justify-content: center;
+  
+    &__card {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 10px;
+      text-align: center;
+      width: 150px;
+  
+      &--img {
+        width: 150px;
+  
+      }
+  
+      &--name {
+        font-size: 1.5rem;
+        color: white;
+        background-color: #8bca92;
+  
+      }
+  
+      &--specie {
+        font-size: 1.2rem;
+        color: white;
+        background-color: #8bca92;
+      }
+  
+    }
+  
+  }

@@ -5,6 +5,7 @@ import CharacterList from './CharacterList';
 import Filters from './Filters';
 import imageHeader from '../images/RyM2.png';
 import { useState, useEffect } from 'react';
+import HeaderImg from './HeaderImg';
 
 function App() {
 
@@ -35,8 +36,8 @@ function App() {
 
   return (
     <div>
-      <header className="header">
-        <img src={imageHeader} className="headerImage" alt="Rick y Morty" />
+      <header>
+        <HeaderImg imageHeader={imageHeader}/>
       </header>
       <main className="main">
         <Filters searchName={searchName} searchSpecie={searchSpecie} handleFilter={handleFilter}/>
