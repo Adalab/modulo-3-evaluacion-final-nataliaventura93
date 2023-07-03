@@ -1,13 +1,6 @@
 @import './core/reset';
 
-.header {
-  background-color: black;
-}
 
-.headerImage {
-  width: 100%;
-  height: auto;
-}
 
 .main {
   background-color: black;
@@ -15,59 +8,4 @@
 }
 
 
-.form {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 
-}
-
-.label {
-  color: #18aabf;
-  font-size: 2rem;
-
-}
-
-.inputName {
-  background-color: black;
-  width: 300px;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #8bca92;
-  height: auto;
-  border: solid 2px #8bca92;
-}
-
-.listCharacter {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 25px;
-  justify-content: center;
-
-  &__card {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 10px;
-    text-align: center;
-
-    &--img {
-      width: 150px;
-
-    }
-
-    &--name {
-      font-size: 1.5rem;
-      color: white;
-      background-color: #8bca92;
-
-    }
-
-    &--specie {
-      font-size: 1.2rem;
-      color: white;
-      background-color: #8bca92;
-    }
-
-  }
-
-}
