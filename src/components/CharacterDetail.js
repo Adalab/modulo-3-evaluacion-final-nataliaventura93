@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import '../styles/layout/CharacterDetail.scss';
+
 const CharacterDetail = ({ cardData }) => {
   return (
     <div>
-      <Link to="/">Back</Link>
+      <Link to="/"><i className="fa-solid fa-backward backLink"> Back</i></Link>
       <section className="character__detail">
         {
           <img
@@ -13,7 +14,7 @@ const CharacterDetail = ({ cardData }) => {
           />
         }
         <div className="character__detail--info">
-          <h2>{cardData.name}</h2>
+          <h2 className="character__detail--infoName">{cardData.name}</h2>
           <p>Status: {cardData.status}</p>
           <p>Species: {cardData.species}</p>
           <p>Origin: {cardData.origin}</p>

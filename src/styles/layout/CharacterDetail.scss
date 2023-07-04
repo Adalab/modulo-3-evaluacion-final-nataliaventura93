@@ -1,0 +1,51 @@
+.backLink {
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.character__detail {
+    background-color: #8bca92;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    padding: 20px;
+
+    &--img {
+        width: 40%;
+    }
+
+    &--info {
+        padding-left: 20px;
+        color: white;
+        font-size: 1.8rem;
+    }
+    &--infoName {
+        font-weight: bold;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .character__detail {
+        flex-direction: column;
+        &--info {
+            padding-top: 10px;
+            font-size: 1.5rem;
+        }
+    .main {
+        margin-bottom: 50px;
+    }
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        padding-bottom: 150px;
+    }
+}
+    
